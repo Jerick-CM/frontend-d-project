@@ -1,0 +1,49 @@
+@import "../../base/colors";
+
+
+.layout--admin {
+  background: color("grey", "lighten-2");
+  color: color("shades", "black");
+  min-height: 100vh;
+
+  header {
+    background: color("shades", "black");
+    color: color("shades", "white");
+
+    .admin-btn {
+      width: 100px;
+      text-align: center;
+      background-color: color("grey", "lighten-2");
+      color: color("shades", "black");
+      font-weight: 700;
+      border-radius: 20px;
+      padding-top: 7px;
+
+      &:hover {
+        background-color: #87bb25;
+        color: color("shades", "white");
+      };
+    }
+
+    @media print {
+      display: none;
+    }
+  }
+  .logout {
+    color: color("shades", "white");
+    font-size: 11px;
+
+    img {
+      margin: 5px auto;
+      display: block;
+      width: 15px;
+    }
+  }
+  footer {
+    padding-bottom: 15px;
+
+    @media print {
+      display: none;
+    }
+  }
+}

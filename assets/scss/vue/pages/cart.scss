@@ -1,0 +1,64 @@
+@import "~assets/scss/base/colors";
+@import "~assets/scss/base/variables";
+
+#cart {
+  table {
+    width: 100%;
+
+    th {
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+  }
+  .cart-items,
+  .computation {
+    background: color("shades", "white");
+    padding: 0;
+    margin: 0 16px 16px;
+
+    @media #{$medium-and-down} {
+      overflow-x: scroll;
+      margin: 0 6px 16px;
+    }
+  }
+  .cart-items table {
+    td {
+      border-bottom: 8px solid color("grey", "lighten-3");
+
+      .item-img {
+        width: 120px;
+        margin: auto;
+      }
+      &:first-child {
+        border-left: 8px solid color("grey", "lighten-3");
+      }
+      &:last-child {
+        border-right: 8px solid color("grey", "lighten-3");
+        min-width: 150px;
+      }
+    }
+  }
+  .computation table {
+    tbody:before {
+      content: '';
+      display: block;
+      height: 10px;
+    }
+    td {
+      padding: 8px 16px 16px;
+
+      &.border-bottom {
+        border-bottom: 1px solid color("shades", "black");
+      }
+    }
+  }
+  .btn-full {
+    width: calc(100% - 24px);
+    margin: 16px 12px;
+  }
+  & > .container--flex {
+    @media #{$small-and-down} {
+      display: block;
+    }
+  }
+}

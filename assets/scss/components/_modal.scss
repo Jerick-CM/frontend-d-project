@@ -1,0 +1,51 @@
+.deloitte-modal {
+  border: 2px solid color("grey", "darken-2");
+  border-radius: 10px;
+  box-shadow: none;
+  overflow-y: unset !important;
+
+  .title {
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 1px solid color("grey", "lighten-2");
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: 12px;
+    color: color("shades", "black");
+  }
+  .v-card__title {
+    border-bottom: 5px solid color("green", "base");
+    font-weight: 700;
+    font-size: 20px;
+    padding-left: 34px;
+    padding-top: 30px;
+
+    .icon {
+      width: 45px;
+      position: absolute;
+      right: 50px;
+    }
+  }
+
+  table {
+    th {
+      font-weight: 200;
+      padding-bottom: 5px;
+    }
+    td {
+      border-top: 2px solid #000;
+      padding-top: 20px;
+    }
+  }
+}
+
+.layout--default .v-dialog {
+  overflow-y: unset !important;
+}
+.v-dialog {
+  .cancel {
+    @include set-position($top: -12px, $right: -12px, $pos: absolute);
+
+    width: 25px;
+  }
+}

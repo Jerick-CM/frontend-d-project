@@ -1,0 +1,28 @@
+@import "~assets/scss/base/variables";
+
+#nomination-list {
+  padding: 0 5px;
+
+  .filter-1 {
+    @media #{$small-and-down} {
+      display: inherit;
+    }
+  }
+  .filters-control {
+    @media #{$small-and-down} {
+      display: inherit;
+    }
+  }
+  .grid-item {
+    width: calc(25% - 8px);
+    margin-top: 8px;
+    margin-bottom: 2px;
+
+    @media #{$medium-only} {
+      width: 99%;
+    }
+    @media #{$small-and-down} {
+      width: calc(100% - 8px);
+    }
+  }
+}

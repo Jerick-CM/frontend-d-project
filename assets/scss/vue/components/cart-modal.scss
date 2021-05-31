@@ -1,0 +1,93 @@
+@import "~assets/scss/base/colors";
+@import "~assets/scss/base/variables";
+@import "~assets/scss/mixins/position";
+
+#cart-modal-wrapper {
+  a {
+    text-align: center;
+    display: block;
+    padding: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 4px 0;
+    color: color("shades", "black");
+
+    .icon.cart {
+      width: 20px;
+      height: 20px;
+      margin: 3px auto;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url('/img/icons/cart-ico.svg');
+    }
+    &:hover {
+      color: color("shades", "white");
+      background-color: color("grey", "darken-1");
+
+      .icon.cart {
+        background-image: url('/img/icons/cart-ico-alt.svg');
+      }
+    }
+  }
+  .cart-link {
+    position: relative;
+
+    .item-count {
+      @include set-position($top: 8px, $right: 10px, $pos: absolute);
+
+      width: 20px;
+      height: 20px;
+      background: color("green", "base");
+      color: color("shades", "white");
+      border-radius: 90%;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      font-size: 9px;
+    }
+  }
+}
+
+#cart-modal {
+  .cart-items {
+    table {
+      width: 100%;
+    }
+  }
+  .quantity-count {
+    min-width: 30px;
+  }
+  .btn-white {
+    background: transparent;
+    color: color("shades", "black");
+    border: 1px solid color("shades", "black");
+
+    &:hover {
+      background: color("shades", "black");
+      color: color("shades", "white");
+    }
+  }
+  .btn {
+    border-radius: 0;
+    float: right;
+    width: 200px;
+    margin-bottom: 5px;
+  }
+  .computation .inline-block {
+    width: 100%;
+  }
+  .computation table {
+    width: 100%;
+  }
+  .computation p {
+    padding: 10px 14px;
+    margin-bottom: 0;
+
+    span {
+      text-transform: uppercase;
+    }
+  }
+  .item-img {
+    max-width: 160px;
+  }
+}

@@ -1,0 +1,79 @@
+#user-transactions-page {
+  .container {
+    margin: 0 auto;
+    max-width: 1366px;
+    width: 98vw;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.print-only {
+  padding: 25px 0;
+   table { page-break-inside:auto }
+   tr    { page-break-inside:avoid; page-break-after:auto }
+
+  .item-list {
+    margin: 0 auto!important;
+    max-width: 1366px!important;
+    width: 96vw!important;
+    position: relative;
+    display: block;
+  }
+  .print-total-tokens,
+  .print-header {
+    display: block !important;
+  }
+  .v-toolbar {
+    display: none;
+  }
+  .white--text {
+    color: #fff!important;
+    caret-color: #fff!important;
+  }
+  .black {
+    background-color: #000!important;
+    border-color: #000!important;
+  }
+  .order-number,
+  .item-list {
+    display: block;
+  }
+  .order-number {
+    font-weight: bold;
+  }
+  .cart-items {
+    table {
+      border-collapse: collapse;
+    }
+    tr {
+      background-color: #FFF;
+    }
+    th, td {
+      border: 10px solid #e0e0e0;
+      border-width: 10px 0;
+    }
+  }
+  .computation {
+    display: none;
+  }
+  .v-dialog--fullscreen {
+    & > .v-card {
+      background-color: #e0e0e0;
+      width: 100%;
+    }
+    .v-card__text {
+      padding-top: 20px !important;
+    }
+  }
+  .layout--admin {
+    & > header,
+    & > footer {
+      display: none;
+    }
+    .application--wrap,
+    #navbar {
+      display: none;
+    }
+  }
+}

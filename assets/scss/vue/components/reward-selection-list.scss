@@ -1,0 +1,21 @@
+@import "~assets/scss/base/variables";
+
+#reward-selection-list {
+  .grid-item {
+    width: calc(25% - 8px);
+    margin-top: 8px;
+    margin-bottom: 2px;
+
+    @media #{$medium-only} {
+      width: 49%;
+    }
+    @media #{$small-and-down} {
+      width: calc(100% - 8px);
+    }
+  }
+  .greeting {
+    font-size: 2rem;
+    font-weight: 200;
+    padding: 16px 6px;
+  }
+}

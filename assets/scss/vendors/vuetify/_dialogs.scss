@@ -1,0 +1,43 @@
+.v-dialog--fullscreen {
+  position: static !important;
+  background: #e0e0e0;
+
+  .v-toolbar {
+    position: fixed !important;
+    z-index: 999;
+  }
+  .v-card__text {
+    padding-top: 80px !important;
+  }
+}
+
+.v-dialog {
+  .v-toolbar__title {
+    width: 100%;
+    text-align: center;
+  }
+  .v-card__text {
+    @media #{$small-and-down} {
+      overflow: auto;
+    }
+  }
+
+  @media #{$small-and-down} {
+    &:not(.v-dialog--fullscreen) {
+      max-height: 100% !important;
+    }
+  }
+}
+
+.v-toolbar__content {
+  @media #{$small-and-down} {
+    height: inherit !important;
+    display: block !important;
+  }
+}
+
+@media print {
+  .v-dialog__content {
+    display: none !important;
+  }
+}

@@ -1,0 +1,72 @@
+@import "~assets/scss/mixins/_position.scss";
+@import "~assets/scss/base/_colors.scss";
+
+#profile-summary {
+  u {
+    font-size: 12px;
+  }
+  .user-profile-details {
+    padding-bottom: 125px;
+  }
+  .name {
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 20px;
+    max-width: 170px;
+    margin: 25px auto 0;
+    word-break: break-word;
+  }
+  .content {
+    min-height: 300px;
+  }
+  .avatar {
+    width: 100px;
+    height: 100px;
+    padding: 8px;
+    overflow: hidden;
+    position: relative;
+
+    img {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+  }
+  .sent,
+  .received {
+    border-top: 1px solid color("shades", "black");
+
+    p {
+      font-size: 13px;
+      margin: 16px 0;
+    }
+    span {
+      font-size: 30px;
+      font-weight: 200;
+    }
+  }
+  .sent {
+    border-right: 1px solid color("shades", "black");
+
+    span {
+      color: color("shades", "black");
+    }
+  }
+  .received {
+    span {
+      color: #87bb25;
+    }
+  }
+  .badges-summary {
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 1;
+    min-height: 100px;
+    margin: auto auto 20px;
+    width: 80%;
+  }
+}

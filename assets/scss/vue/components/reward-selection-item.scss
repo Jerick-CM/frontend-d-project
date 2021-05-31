@@ -1,0 +1,94 @@
+@import "~assets/scss/base/_colors.scss";
+@import "~assets/scss/mixins/_position.scss";
+
+
+#reward-selection-item {
+  position: relative;
+  border: 1px solid transparent;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+
+  &.is-addable {
+    .item-img {
+      &:hover {
+        &::before {
+          @include set-position($top: 0, $left: 0, $pos: absolute, $zi: 2);
+
+          content: " ";
+          height: 100%;
+          width: 100%;
+          opacity: 0.5;
+          background-color: color("grey", "lighten-5");
+        }
+        &::after {
+          @include set-position($top: 0, $left: 0, $pos: absolute, $zi: 10);
+
+          content: " ";
+          width: 100%;
+          height: 100%;
+          background-image: url('/img/icons/cart-add-ico.png');
+          background-repeat: no-repeat;
+          background-size: 80px;
+          background-position: center;
+        }
+      }
+    }
+  }
+  .item-name {
+    border-bottom: 1px solid #676767;
+    min-height: 81px;
+  }
+  .item-details {
+    padding-left: 24px;
+    padding-right: 24px;
+    position: relative;
+  }
+  .cart-count-wrapper {
+    text-align: center;
+    color: color("shades", "white");
+
+    .cart-count {
+      @include set-position($top: -1px, $right: 0, $pos: absolute, $zi: 3);
+
+      border-top: 50px solid #88ba25;
+      border-left: 50px solid transparent;
+      font-weight: 700;
+      width: 50px;
+    }
+    span {
+      @include set-position($top: 0, $right: 0, $pos: absolute, $zi: 4);
+
+      font-size: 14px;
+      font-weight: 700;
+      width: 30px;
+    }
+  }
+  .item-img {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 200px;
+
+    img {
+      @include set-position(0,0,0,0,absolute);
+
+      margin: auto;
+      height: auto;
+      width: 80%;
+      max-width: 180px;
+    }
+  }
+}
+
+#reward-selection-item-modal {
+  .primary-photo {
+    max-height: 200px;
+    min-height: 200px;
+  }
+  .item-description {
+    max-height: 250px;
+    overflow: auto;
+  }
+}

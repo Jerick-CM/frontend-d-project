@@ -1,0 +1,97 @@
+body, html {
+  margin: 0;
+  min-height: 100vh;
+  min-width: 240px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  font-family: $font-stack;
+  scroll-behavior: smooth;
+  background: color("grey", "lighten-5");
+  color: color("grey", "darken-2");
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.4;
+  font-size: 16px;
+  font-family: $font-stack;
+
+  @media #{$small-and-down} {
+    font-size: 14px;
+  }
+}
+*, *:before, *:after
+{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  text-transform: unset;
+}
+
+.v-btn,
+button {
+  text-transform: unset !important;
+}
+
+.material-icons {
+  vertical-align: middle;
+}
+
+*:focus {
+  outline: none;
+  -webkit-tap-highlight-color:transparent;
+  -moz-tap-highlight-color:transparent;
+  -o-tap-highlight-color:transparent;
+  tap-highlight-color:transparent;
+}
+
+.theme--light.application {
+  background-color: #e0e0e0 !important;
+}
+
+.title,
+.application {
+  font-family: $font-stack;
+}
+
+table {
+  border-spacing: 0px;
+}
+
+* {
+  font-family: $font-stack;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+  text-transform: unset;
+}
+
+.layout--admin {
+  .v-datatable.v-table {
+    thead {
+      tr {
+        th {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+.v-dialog.v-dialog--active {
+  max-width: inherit !important;
+  width: 500px;
+}
+.v-dialog.v-dialog--active.v-dialog--fullscreen {
+  width: inherit;
+}
+
+pre {
+  font-family: inherit;
+  white-space: pre-wrap;
+}

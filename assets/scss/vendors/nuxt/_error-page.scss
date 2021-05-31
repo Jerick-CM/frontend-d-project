@@ -1,0 +1,11 @@
+.__nuxt-error-page {
+  background: color("red", "accent-2");
+
+  .title,
+  .error-link {
+    color: color("shades", "white") !important;
+  }
+  .logo {
+    display: none;
+  }
+}

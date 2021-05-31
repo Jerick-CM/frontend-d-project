@@ -1,0 +1,24 @@
+@import "~assets/scss/base/variables";
+
+#profile {
+  .greeting {
+    font-size: 40px;
+    font-weight: 200;
+    padding-bottom: 15px;
+  }
+  .help {
+    position: absolute;
+    width: 20px;
+    right: 90px;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  .profile-summary {
+    @media #{$small-and-down} {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,76 @@
+.btn {
+  cursor: pointer;
+  border: $button-border;
+  padding: $button-padding;
+  border-radius: $button-radius;
+  height: $button-height;
+  -webkit-tap-highlight-color: transparent; // Gets rid of tap active state
+
+  // Default
+  background-color: color("shades", "black");
+  color: color("shades", "white");
+
+  &.btn--alt {
+    border: 1px solid color("shades", "white");
+    color: color("green", "accent-5");
+  }
+  &.full-btn {
+    width: 100%;
+  }
+  &.btn-flat {
+    border-radius: 0;
+  }
+  &.btn-full {
+    width: 100%;
+  }
+  &.btn-green {
+    background: #87bc26;
+
+    &:hover {
+      color: #87bc26;
+      background: color("shades", "black");
+    }
+  }
+  &.btn--rounded {
+    width: 100px;
+    text-align: center;
+    background-color: color("grey", "lighten-2");
+    color: color("shades", "black");
+    font-weight: 700;
+    border-radius: 20px;
+    padding-top: 7px;
+
+    &:hover {
+      background-color: color("green", "base");
+      color: color("shades", "white");
+    };
+  }
+}
+
+// Disabled shared style
+.btn.disabled,
+.btn-floating.disabled,
+.btn-large.disabled,
+.btn-small.disabled,
+.btn-flat.disabled,
+.btn:disabled,
+.btn-floating:disabled,
+.btn-large:disabled,
+.btn-small:disabled,
+.btn-flat:disabled,
+.btn[disabled],
+.btn-floating[disabled],
+.btn-large[disabled],
+.btn-small[disabled],
+.btn-flat[disabled] {
+  pointer-events: none;
+  background-color: $button-disabled-background !important;
+  box-shadow: none;
+  color: $button-disabled-color !important;
+  cursor: default;
+
+  &:hover {
+    background-color: $button-disabled-background !important;
+    color: $button-disabled-color !important;
+  }
+}

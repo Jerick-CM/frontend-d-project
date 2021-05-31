@@ -1,0 +1,87 @@
+// /* Text Inputs + Textarea
+//    ========================================================================== */
+
+.rounded-input {
+  border-radius: 7px;
+  position: relative;
+  padding: 8px;
+  border: 1px solid #737373;
+}
+
+// /* Style Placeholders */
+
+// ::placeholder {
+//   color: $placeholder-text-color;
+// }/* Text inputs */
+
+// input:not([type]),
+// input[type=text]:not(.browser-default),
+// input[type=password]:not(.browser-default),
+// input[type=email]:not(.browser-default),
+// input[type=url]:not(.browser-default),
+// input[type=time]:not(.browser-default),
+// input[type=date]:not(.browser-default),
+// input[type=datetime]:not(.browser-default),
+// input[type=datetime-local]:not(.browser-default),
+// input[type=tel]:not(.browser-default),
+// input[type=number]:not(.browser-default),
+// input[type=search]:not(.browser-default),
+// textarea.materialize-textarea {
+
+//   // General Styles
+//   background-color: transparent;
+//   border: none;
+//   border-bottom: $input-border;
+//   border-radius: 0;
+//   outline: none;
+//   height: $input-height;
+//   width: 100%;
+//   font-size: $input-font-size;
+//   margin: $input-margin;
+//   padding: $input-padding;
+//   box-shadow: none;
+//   box-sizing: content-box;
+//   transition: box-shadow .3s, border .3s;
+
+//   // Disabled input style
+//   &:disabled,
+//   &[readonly="readonly"] {
+//     color: $input-disabled-color;
+//     border-bottom: $input-disabled-border;
+//   }
+
+//   // Disabled label style
+//   &:disabled+label,
+//   &[readonly="readonly"]+label {
+//     color: $input-disabled-color;
+//   }
+
+//   // Focused input style
+//   &:focus:not([readonly]) {
+//     border-bottom: 1px solid $input-focus-color;
+//     box-shadow: 0 1px 0 0 $input-focus-color;
+//   }
+
+//   // Focused label style
+//   &:focus:not([readonly])+label {
+//     color: $input-focus-color;
+//   }
+// }
+
+// /* Textarea */
+
+// // Default textarea
+// textarea {
+//   width: 100%;
+//   height: $input-height;
+//   background-color: transparent;
+
+//   &.materialize-textarea {
+//     line-height: normal;
+//     overflow-y: hidden; /* prevents scroll bar flash */
+//     padding: .8rem 0 .8rem 0; /* prevents text jump on Enter keypress */
+//     resize: none;
+//     min-height: $input-height;
+//     box-sizing: border-box;
+//   }
+// }

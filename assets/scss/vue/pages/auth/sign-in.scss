@@ -1,0 +1,44 @@
+@import "../../../base/colors";
+@import "../../../base/variables";
+
+#sign-in {
+  .form {
+    background-color: color("green", "accent-4");
+    width: 350px;
+    padding: 25px;
+
+    @media #{$small-and-down} {
+      width: 100%;
+    }
+    .form-title {
+      font-size: 2rem;
+
+      @media #{$small-and-down} {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  .logo {
+    width: 250px;
+    margin-top: 80px;
+    margin-bottom: 20px;
+
+    @media #{$small-and-down} {
+      width: 180px;
+    }
+  }
+  .page-header {
+    border-bottom: 10px solid color("green", "base");
+    padding: 3rem 0 1rem;
+  }
+  .controls {
+    margin-top: 10px;
+
+    a {
+      color: color("shades", "black");
+    }
+    button {
+      margin: 10px 0;
+    }
+  }
+}

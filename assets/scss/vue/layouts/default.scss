@@ -1,0 +1,159 @@
+@import "~assets/scss/base/colors";
+@import "~assets/scss/base/variables";
+@import "~assets/scss/mixins/position";
+
+
+aside.theme--light.v-navigation-drawer {
+  background-color: #e0e0e0;
+}
+.layout--default {
+  background: color("grey", "lighten-2");
+  color: color("shades", "black");
+  min-height: 100vh;
+
+  header {
+    background: color("shades", "black");
+    color: color("shades", "white");
+
+    .v-toolbar__side-icon {
+      display: none;
+
+      @media screen and (max-width: 744px) {
+        display: block;
+      }
+    }
+    .admin-btn {
+      width: 100px;
+      text-align: center;
+      background-color: color("grey", "lighten-2");
+      color: color("shades", "black");
+      font-weight: 700;
+      border-radius: 20px;
+      padding-top: 7px;
+      display: none;
+
+      &:hover {
+        background-color: #87bb25;
+        color: color("shades", "white");
+      };
+
+      @media only screen and (min-width: 745px) {
+        display: block;
+      }
+    }
+
+    @media print {
+      display: none;
+    }
+  }
+  .logout {
+    color: color("shades", "white");
+    font-size: 11px;
+
+    img {
+      margin: 5px auto;
+      display: block;
+      width: 15px;
+    }
+  }
+  footer {
+    padding-bottom: 15px;
+
+    @media print {
+      display: none;
+    }
+  }
+
+  @media #{$small-and-down} {
+    .admin-btn,
+    .searchbar-wrapper {
+      display: none;
+    }
+  }
+
+  .item-count {
+    @include set-position($top: 10px, $left: 120px, $pos: absolute);
+
+    width: 20px;
+    height: 20px;
+    background: color("green", "base");
+    color: color("shades", "white");
+    border-radius: 90%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 9px;
+  }
+
+  .v-list .active {
+    background: #858585;
+    color: color("shades", "white");
+
+    .icon {
+      &.profile {
+        background-image: url('/img/icons/person-ico-alt.svg');
+      }
+      &.redeem {
+        background-image: url('/img/icons/gift-ico-alt.svg');
+      }
+      &.index {
+        background-image: url('/img/icons/home-ico-alt.svg');
+      }
+      &.admin {
+        background-image: url('/img/icons/home-ico-alt.svg');
+      }
+      &.cart {
+        background-image: url('/img/icons/cart-ico-alt.svg');
+      }
+      &.faq {
+        background-image: url('/img/icons/faq-ico-alt.svg');
+      }
+    }
+  }
+  .icon {
+    width: 20px;
+    height: 20px;
+    margin: 3px auto;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &.profile {
+      background-image: url('/img/icons/person-ico.svg');
+    }
+    &.redeem {
+      background-image: url('/img/icons/gift-ico.svg');
+    }
+    &.index {
+      background-image: url('/img/icons/home-ico.svg');
+    }
+    &.admin {
+      background-image: url('/img/icons/home-ico.svg');
+    }
+    &.cart {
+      background-image: url('/img/icons/cart-ico.svg');
+    }
+    &.faq {
+      background-image: url('/img/icons/faq-ico.svg');
+    }
+  }
+  .remaining-credits,
+  .remaining-tokens {
+    border: 2px solid #9a9a9a;
+    border-radius: 30px;
+    font-weight: 700;
+    height: 40px;
+    width: 135px;
+    line-height: 14px;
+    padding: 3px 0 0;
+    text-align: center;
+  }
+  .remaining-tokens {
+    color: color("shades", "white");
+    background-color: #858585;
+  }
+  .remaining-credits {
+    color: color("shades", "white");
+    border: 2px solid #789309;
+    background-color: #94b944;
+  }
+}

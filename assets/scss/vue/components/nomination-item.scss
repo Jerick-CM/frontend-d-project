@@ -1,0 +1,68 @@
+@import "~assets/scss/base/colors";
+
+#nomination-item {
+  background-color: color("shades", "white");
+  padding: 15px 15px 5px;
+
+  header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid color("grey", "lighten-1");
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+  }
+  footer {
+    border-top: 1px solid color("grey", "lighten-1");
+    margin-top: 10px;
+    padding-top: 10px;
+  }
+  .content {
+    font-size: 14px;
+    min-height: 331px;
+
+    .name,
+    .date {
+      color: #a9a9a9;
+    }
+    .name {
+      text-transform: capitalize;
+    }
+  }
+  .detail {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 230px;
+    padding-left: 10px;
+
+    .name {
+      font-size: 20px;
+      text-transform: capitalize;
+    }
+  }
+  .comment {
+    overflow: hidden;
+  }
+  .like-btn {
+    color: color("shades", "black");
+    font-size: 13px;
+    font-weight: 700;
+
+    &:hover,
+    &.active {
+      .thumbs-up-icon {
+        background-image: url('/img/icons/thumbs-up-alt.svg');
+        background-repeat: no-repeat;
+      }
+    }
+    .thumbs-up-icon {
+      background-image: url('/img/icons/thumbs-up.svg');
+      background-repeat: no-repeat;
+      width: 30px;
+      height: 37px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}

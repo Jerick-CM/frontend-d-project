@@ -1,0 +1,23 @@
+$icons: award-ico c-letter-ico check-ico diamond gift-ico home-ico lock-ico message-ico person-ico plus prospect star transactions-ico cart-ico;
+
+.icon {
+  display: block;
+
+  @each $icon in $icons {
+    &.icon--#{$icon} {
+      color: color("shades", "white");
+      background: color("shades", "black");
+      background-image: url('/img/icons/#{$icon}.svg');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.badge {
+  text-align: center;
+
+  img {
+    height: 200px;
+  }
+}

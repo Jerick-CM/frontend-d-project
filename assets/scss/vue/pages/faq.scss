@@ -1,0 +1,51 @@
+@import "~assets/scss/base/colors";
+@import "~assets/scss/base/variables";
+
+#faq {
+  .v-expansion-panel ul {
+    margin-left: 0
+  }
+  h4 {
+    text-transform: inherit;
+  }
+  .container {
+    padding: 3px;
+  }
+  .faq-content img {
+    max-width: 100%;
+  }
+  .badge-listing {
+    th {
+      background-color: #86bc25;
+      border-bottom: 3px solid #FFF !important;
+    }
+    td {
+      background-color: #d9e7cd;
+    }
+    th,td {
+      border: 1px solid #FFF;
+      text-align: left;
+      padding: 16px;
+
+      &:first-child {
+        width: 55px
+      }
+      &:nth-child(2) {
+        width: 200px;
+        text-align: center;
+        border-left: none;
+        border-right: none;
+      }
+    }
+  }
+  .best-use-table {
+    width: 500px;
+  }
+  .best-use-table,
+  .best-use-table td {
+    vertical-align: top;
+    padding: 10px;
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+}

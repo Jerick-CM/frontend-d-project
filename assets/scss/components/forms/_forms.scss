@@ -1,0 +1,113 @@
+.form {
+  .input-group {
+    position: relative;
+
+    .post-icon {
+      color: #737373;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 5px;
+      margin: auto;
+      height: 24px;
+    }
+    label {
+      color: color("shades", "black");
+      display: block;
+    }
+  }
+  .form-input {
+    width: 100%;
+    padding: 10px 5px;
+    border: none;
+  }
+}
+
+// Override Vuetify component CSS for input field
+.contact-form-field {
+  font-weight: bold;
+
+  & > .v-input__control {
+    .v-input__slot {
+      background: #efefef;
+
+      &:before {
+        width: 0 !important;
+      }
+      .v-select__selection,
+      textarea::placeholder,
+      textarea::-webkit-input-placeholder,
+      input::placeholder,
+      input::-webkit-input-placeholder,
+      textarea,
+      input {
+        color: #75746c;
+        font-weight: bold;
+      }
+      .v-select__slot,
+      .v-text-field__slot {
+        padding: 5px 10px;
+      }
+    }
+  }
+  &.v-input--is-disabled {
+    & > .v-input__control {
+      .v-input__slot {
+        opacity: 0.3;
+      }
+    }
+  }
+  &.v-input--radio-group {
+    .v-input__slot {
+      background: none;
+      .v-input--radio-group__input {
+        .v-radio {
+          .v-input--selection-controls__input {
+            .v-input--selection-controls__ripple {
+              z-index: 10;
+            }
+            .v-icon {
+              visibility: hidden;
+              position: relative;
+              pointer-events: all;
+              cursor: pointer;
+
+              &.light-green--text {
+                &::after {
+                  color: rgb(156, 204, 101) !important;
+                  content: "check_box";
+                  pointer-events: all;
+                  cursor: pointer;
+                }
+              }
+              &::after {
+                color: #eee;
+                visibility: visible;
+                position: absolute;
+                content: "check_box";
+                pointer-events: all;
+                cursor: pointer;
+                height: 0;
+                width: 0;
+                left: 0;
+                top: 0;
+                margin: auto;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &.v-textarea {
+    & > .v-input__control {
+      .v-input__slot {
+        padding: 0 !important;
+
+        textarea {
+          margin-top: 6px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,119 @@
+@import "~assets/scss/base/colors";
+@import "~assets/scss/base/variables";
+
+#navbar {
+  .container {
+    margin: 0 auto;
+    max-width: 1366px;
+    width: 97.5%!important;
+    padding-top: 0;
+    padding-bottom: 0;
+    max-width: 1360px !important;
+  }
+  @media print {
+    display: none;
+  }
+  @media screen and (max-width: 744px) {
+    .desktop-menu {
+      display: none;
+    }
+  }
+  .v-menu__activator.v-menu__activator--active {
+    a {
+      color: #fff;
+      background-color: #757575;
+    }
+  }
+  .list {
+    .remaining-tokens,
+    .remaining-credits {
+      padding: 3px 16px;
+      border: 2px solid #9a9a9a;
+      border-radius: 30px;
+      font-weight: 700;
+      height: 40px;
+      width: 135px;
+      line-height: 14px;
+      padding: 3px 0 0;
+      text-align: center;
+
+      span {
+        font-size: 14px;
+      }
+    }
+    .remaining-tokens {
+      color: color("shades", "white");
+      background-color: #858585;
+    }
+    .remaining-credits {
+      color: color("shades", "white");
+      border: 2px solid #789309;
+      background-color: #94b944;
+    }
+    a {
+      text-align: center;
+      display: block;
+      padding: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      margin: 4px 0;
+      color: color("shades", "black");
+
+      .icon {
+        width: 20px;
+        height: 20px;
+        margin: 3px auto;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: none;
+
+        &.profile {
+          background-image: url('/img/icons/person-ico.svg');
+        }
+        &.redeem {
+          background-image: url('/img/icons/gift-ico.svg');
+        }
+        &.index {
+          background-image: url('/img/icons/home-ico.svg');
+        }
+        &.admin {
+          background-image: url('/img/icons/home-ico.svg');
+        }
+        &.cart {
+          background-image: url('/img/icons/cart-ico.svg');
+        }
+        &.faq {
+          background-image: url('/img/icons/faq-ico.svg');
+        }
+      }
+      &.nuxt-link-active,
+      &:hover {
+        color: color("shades", "white");
+        background-color: color("grey", "darken-1");
+
+        .icon {
+          color: color("shades", "white");
+
+          &.profile {
+            background-image: url('/img/icons/person-ico-alt.svg');
+          }
+          &.redeem {
+            background-image: url('/img/icons/gift-ico-alt.svg');
+          }
+          &.index {
+            background-image: url('/img/icons/home-ico-alt.svg');
+          }
+          &.cart {
+            background-image: url('/img/icons/cart-ico-alt.svg');
+          }
+          &.faq {
+            background-image: url('/img/icons/faq-ico-alt.svg');
+          }
+        }
+      }
+    }
+    .material-icons {
+      display: block;
+    }
+  }
+}

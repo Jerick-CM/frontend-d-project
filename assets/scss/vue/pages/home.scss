@@ -1,0 +1,26 @@
+@import "../../base/variables";
+@import "../../base/colors";
+
+#home {
+  .promo-container {
+    margin-bottom: 15px;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 15px;
+    width: 99vw;
+    padding-right: 3px;
+    padding-left: 3px;
+    padding-top: 0;
+
+    @media #{$medium-and-down} {
+      grid-template-columns: 1fr;
+      height: 100%;
+      grid-template-rows: 400px;
+      max-height: 900px;
+      width: 100vw;
+    }
+  }
+  .reward-listing {
+    background: color("grey", "lighten-2");
+    min-height: 566px;
+  }
+}

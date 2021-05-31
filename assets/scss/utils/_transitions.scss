@@ -1,0 +1,22 @@
+// Nuxt Default Page Transition
+// ================================================
+
+.page-enter-active, .page-leave-active {
+  transition: opacity .3s, transform .3s;
+}
+.page-enter, .page-leave-to {
+  opacity: 0;
+}
+
+.page-enter-active {
+  transform: translateY(0%);
+}
+.page-leave-active {
+  transform: translateY(0%);
+}
+.page-leave-to {
+  transform: translateY(-10%);
+}
+.page-enter {
+  transform: translateY(-10%);
+}

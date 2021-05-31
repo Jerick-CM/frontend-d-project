@@ -1,0 +1,37 @@
+@import "~assets/scss/base/variables";
+
+#carousel-item {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  flex: none;
+
+  .content {
+    width: 100%;
+    height: 100%;
+    transition: margin-left 600ms cubic-bezier(0.23, 1, 0.32, 1);
+    white-space: normal;
+    padding: 25px;
+    position: relative;
+  }
+  .badge-container {
+    @media only screen and (max-width: 1024px) {
+      width: 70%;
+      margin: auto;
+    }
+    @media #{$small-and-down} {
+      width: 90%;
+      margin: auto;
+    }
+  }
+  .badge-img {
+    @media only screen and (max-width: 1024px) {
+      max-width: 105px;
+      margin: auto;
+    }
+    @media #{$medium-and-down} {
+      max-width: 105px;
+      margin: auto;
+    }
+  }
+}
